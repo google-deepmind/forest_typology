@@ -10,14 +10,17 @@ development of accurate and reliable models critical for efforts like halting
 deforestation, biodiversity conservation, and compliance with regulations such
 as the European Union Deforestation Regulation (EUDR).
 
+<p align="center">
 <div style="text-align:center">
     <figure>
         <img src ="../img/forty_v1_coverage.png" width="600" alt="ForTy (v1) sample locations">
+        <br>
         <figcaption>
-        ForTy (v1) sample locations.
+        <strong>ForTy (v1) sample locations.</strong>
         </figcaption>
     </figure>
 </div>
+</p>
 
 Accurate differentiation between various forest types (e.g., natural forests,
 planted forests, and tree crops) is crucial for effective policy-making,
@@ -31,7 +34,7 @@ tasks on a global scale. ForTy addresses these limitations by providing:
 -   **Per-Pixel Labels:** Enabling image segmentation tasks at 10 meter
     resolution.
 -   **Multi-modal & Multi-temporal Data:** Incorporating multi-spectral/optical,
-    polarimetric synthetic apertrure radar (SAR), climate, and elevation data
+    polarimetric synthetic aperture radar (SAR), climate, and elevation data
     over time to capture complex variations.
 -   **Global Coverage:** Covering most land areas with a bias for diverse forest
     types, leveraging multiple public data sources.
@@ -80,38 +83,29 @@ tasks on a global scale. ForTy addresses these limitations by providing:
     | `id`                  | `()`            | `int64`   | Sample ID        |
     | `lat`                 | `()`            | `float64` | Latitude [deg]   |
     | `lon`                 | `()`            | `float64` | Longitude [deg]  |
-    | `s2`                  | `(4, 128, 128,  | `float32` | Seasonal         |
-    :                       : 10)`            :           : Sentinel-2       :
-    | `s2_mask`             | `(4, 128, 128,  | `uint8`   | Seasonal         |
-    :                       : 10)`            :           : Sentinel-2 mask  :
-    | `s1_asc`              | `(4, 128, 128,  | `float32` | Seasonal         |
-    :                       : 3)`             :           : Sentinel-1       :
-    :                       :                 :           : ascending        :
-    | `s1_asc_mask`         | `(4, 128, 128,  | `uint8`   | Seasonal         |
-    :                       : 3)`             :           : Sentinel-1       :
-    :                       :                 :           : ascending mask   :
-    | `s1_desc`             | `(4, 128, 128,  | `float32` | Seasonal         |
-    :                       : 3)`             :           : Sentinel-1       :
-    :                       :                 :           : descending       :
-    | `s1_desc_mask`        | `(4, 128, 128,  | `uint8`   | Seasonal         |
-    :                       : 3)`             :           : Sentinel-1       :
-    :                       :                 :           : descending mask  :
-    | `elevation`           | `(128, 128, 3)` | `float32` | Elevation [m],   |
-    :                       :                 :           : slope, aspect    :
-    | `climate`             | `(4, 1, 1, 14)` | `float32` | Seasonal climate |
-    :                       :                 :           : variables        :
-    | `segmentation_labels` | `(128, 128)`    | `uint8`   | Segmentation     |
-    :                       :                 :           : labels           :
+    | `s2`                  | `(4, 128, 128, 10)`  | `float32` | Seasonal Sentinel-2 |
+    | `s2_mask`             | `(4, 128, 128, 10)` | `uint8`   | Seasonal Sentinel-2 mask |
+    | `s1_asc`              | `(4, 128, 128, 3)` | `float32` | Seasonal Sentinel-1 ascending |
+    | `s1_asc_mask`         | `(4, 128, 128, 3)`  | `uint8`   | Seasonal Sentinel-1 ascending mask |
+    | `s1_desc`             | `(4, 128, 128, 3)` | `float32` | Seasonal Sentinel-1 descending |
+    | `s1_desc_mask`        | `(4, 128, 128, 3)` | `uint8`   | Seasonal Sentinel-1 descending mask |
+    | `elevation`           | `(128, 128, 3)` | `float32` | Elevation [m], slope, aspect |
+    | `climate`             | `(4, 1, 1, 14)` | `float32` | Seasonal climate variables |
+    | `segmentation_labels` | `(128, 128)`    | `uint8`   | Segmentation labels |
 
 *   **Visualization of some examples**
-    <div style="text-align:center">
-        <figure>
-            <img src ="../img/forty_v1_examples.png" width="500" alt="ForTy (v1) examples from different data sources">
-            <figcaption>
-            Examples from left to right: (1) Sentinel-2 RGB bands, (2) Sentinel-2 SWIR-NIR-Red bands, (3) multi-temporal Sentinel-1 VV winter-spring-summer composition, (4) elevation, (5) labels. Bottom row: color bar for labels.
-            </figcaption>
-        </figure>
-    </div>
+
+<p align="center">
+<div style="text-align:center">
+    <figure>
+        <img src ="../img/forty_v1_examples.png" width="500" alt="ForTy (v1) examples from different data sources">
+        <br>
+        <figcaption><strong>
+        Each row represents one sample location. Columns from left to right: (1) Sentinel-2 RGB bands, (2) Sentinel-2 SWIR-NIR-Red bands, (3) multi-temporal Sentinel-1 VV winter-spring-summer composition, (4) elevation, (5) labels. Bottom row: color bar for labels.
+        </strong></figcaption>
+    </figure>
+</div>
+</p>
 
 ## Data Access
 
