@@ -122,9 +122,35 @@ facilitate efficient loading and processing. The file naming convention for the
 shards is `forty_v1-{split}.tfrecord-{shard_num:05d}-of-{num_shards:05d}` (e.g.,
 `forty_v1-train.tfrecord-00000-of-01024`).
 
+The data can be downloaded using
+[Cloud SDK](https://cloud.google.com/sdk/docs/quickstart), which provides the
+`gcloud` utility, with a
+[command](https://cloud.google.com/storage/docs/discover-object-storage-gcloud#download_the_object_from_your_bucket)
+like (be careful that it will start a download of 1 TB):
+
+```bash
+mkdir /tmp/forty_v1
+gsutil storage cp -r gs://forest_typology/forty_v1/1.0.0 /tmp/forty_v1/
+```
+
 ## Data Usage
 
 Examples for data loading, visualization, download: TBD.
+
+The simplest way to use the data is via Tensorflow Datasets (TFDS) builder.
+These python commands demonstrate one way how to access it:
+
+```
+import tensorflow_datasets as tfds
+ds_all, info = tfds.load("forty_v1", data_dir="gs://forest_typology", try_gcs=True, with_info=True)
+# Prints informaiton about the dataset:
+print(info)
+# Gets a batch of 4 examples for inspection
+batch = next(ds_all["train"].batch(4).as_numpy_iterator())
+```
+
+For more, check the [notebook example](forty_v1_demo.ipynb) (you can connect it
+to a Google's colab environemnt for quick exploration)
 
 ## Citing this work
 
@@ -145,8 +171,8 @@ You can cite this work as
 
 Copyright 2025 DeepMind Technologies Limited
 
-The ForTy (v1) dataset has a [Creative Commons Attribution ShareAlike 4.0
-International License](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+The ForTy (v1) dataset has a
+[Creative Commons Attribution ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
 All other non-software materials are licensed under the Creative Commons
 Attribution 4.0 International License (CC-BY). You may obtain a copy of the
