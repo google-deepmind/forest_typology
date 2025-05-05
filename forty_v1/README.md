@@ -145,9 +145,12 @@ You can cite this work as
 
 Copyright 2025 DeepMind Technologies Limited
 
-All non-software materials are licensed under the Creative Commons Attribution
-4.0 International License (CC-BY). You may obtain a copy of the CC-BY license
-at: https://creativecommons.org/licenses/by/4.0/legalcode
+The ForTy (v1) dataset has a [Creative Commons Attribution ShareAlike 4.0
+International License](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+
+All other non-software materials are licensed under the Creative Commons
+Attribution 4.0 International License (CC-BY). You may obtain a copy of the
+CC-BY license at: https://creativecommons.org/licenses/by/4.0/legalcode
 
 Unless required by applicable law or agreed to in writing, all software and
 materials distributed here under the Apache 2.0 or CC-BY licenses are

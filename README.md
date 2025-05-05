@@ -1,26 +1,31 @@
-# Forest Topology
+# Forest Typology
 
 Protecting biodiversity and curbing carbon emissions from deforestation demands
 a deeper understanding of global forest cover. Informed decision-making hinges
 not only on knowing where forests are, but on understanding their composition
-and distinguishing natural forests that play critical roles as biodiversity
+and distinguishing forest types that play critical roles as biodiversity
 hotspots and major carbon sinks.
 
-[Google DeepMind](https://deepmind.google/) (GDM) and
-[Google Research](https://research.google/) in collaboration with partners
-([World Resources Institute](https://www.wri.org/) (WRI),
+[Google DeepMind](https://deepmind.google/) (GDM) in collaboration with external
+([World Resources Institute](https://www.wri.org/) (WRI)), and internal partners
+([Google Research](https://research.google/),
 [Google Geo Sustainability](https://earthoutreachonair.withgoogle.com/)) are
 developing AI models to estimate the forest types and to generate regional to
 global maps of forest land cover. In addition to releasing these layers we
 create benchmark datasets for AI researchers.
 
-## Forest layers
+## Forest and habitat layers
 
-*   TBD.
+*   Natural forests of the world (Upcoming).
+*   Global drivers of forest loss (Upcoming).
 
 ## Benchmark datasets
 
-*   [ForTy (v1)](./forty_v1/README.md) - a forest types benchmark dataset.
+*   [ForTy (v1)](./forty_v1/README.md) - global multi-temporal multi-source
+    segmentation benchmark dataset for forest types.
+*   [Planted](./planted/README.md) - large-scale benchmark dataset for planted
+    forest recognition (with subtasks for monoculture plantation tree species
+    and genera recognition).
 
 ## License and disclaimer
 
