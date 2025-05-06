@@ -1,5 +1,8 @@
 # ForTy (v1): A Benchmark Dataset for Global Forest Types Mapping
 
+Paper: [Not every tree is a forest: benchmarking forest types from satellite
+remote sensing](https://arxiv.org/abs/2505.01805)
+
 ForTy is a new large-scale, multi-modal, and multi-temporal benchmark dataset
 designed for advancing global FORest TYpes mapping. It comprises 200,000 time
 series of image patches, each including Sentinel-2, Sentinel-1, climate, and
@@ -135,22 +138,18 @@ gsutil storage cp -r gs://forest_typology/forty_v1/1.0.0 /tmp/forty_v1/
 
 ## Data Usage
 
-Examples for data loading, visualization, download: TBD.
-
-The simplest way to use the data is via Tensorflow Datasets (TFDS) builder.
+The simplest way to use the data is via Tensorflow Datasets
+([TFDS](https://www.tensorflow.org/datasets)).
 These python commands demonstrate one way how to access it:
 
-```
+```python
 import tensorflow_datasets as tfds
-ds_all, info = tfds.load("forty_v1", data_dir="gs://forest_typology", try_gcs=True, with_info=True)
-# Prints informaiton about the dataset:
-print(info)
-# Gets a batch of 4 examples for inspection
-batch = next(ds_all["train"].batch(4).as_numpy_iterator())
+ds = tfds.load("forty_v1", data_dir="gs://forest_typology", try_gcs=True)
+# Get a batch of 4 examples (as numpy arrays) for inspection
+batch = next(ds["train"].batch(4).as_numpy_iterator())
 ```
 
-For more, check the [notebook example](forty_v1_demo.ipynb) (you can connect it
-to a Google's colab environemnt for quick exploration)
+For more, check the [notebook example](forty_v1_demo.ipynb).
 
 ## Citing this work
 
@@ -162,6 +161,7 @@ You can cite this work as
   remote sensing},
   author={Yuchang Jiang and Maxim Neumann},
   booktitle={Presented at IEEE IGARSS 2025},
+  url={https://arxiv.org/abs/2505.01805},
   pages={1-6},
   year={2025}
 }

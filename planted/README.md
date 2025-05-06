@@ -1,5 +1,8 @@
 # Planted: A Dataset for Planted Forest Identification from Multi-Satellite Time Series
 
+Paper: [Planted: a dataset for planted forest identification from
+multi-satellite time series](https://arxiv.org/abs/2406.18554)
+
 This repository provides information and access to the **Planted** benchmark
 dataset, a global, multimodal, multi-temporal, and multi-scale classification
 dataset designed to foster research in forest monitoring using diverse satellite
