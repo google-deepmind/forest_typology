@@ -16,7 +16,8 @@ create benchmark datasets for AI researchers.
 
 ## Forest and habitat layers
 
-*   Natural forests of the world (Upcoming).
+*   [Natural forests of the world (v1)](./natural_forests/README.md) - global
+    map of natural forests for 2020.
 *   Global drivers of forest loss (Upcoming).
 
 ## Benchmark datasets
