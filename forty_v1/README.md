@@ -133,7 +133,7 @@ like (be careful that it will start a download of 1 TB):
 
 ```bash
 mkdir /tmp/forty_v1
-gsutil storage cp -r gs://forest_typology/forty_v1/1.0.0 /tmp/forty_v1/
+gcloud storage cp --recursive gs://forest_typology/forty_v1/1.0.0 /tmp/forty_v1/
 ```
 
 ## Data Usage
